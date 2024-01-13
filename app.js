@@ -40,8 +40,14 @@ const editar = () => {
     boton2.addEventListener("click", () => {
       let indice = parseInt(input.value) - 1;
       let nuevaNota = edicion.value;
-      notas[indice] = nuevaNota;
-      ver();
+      if (indice < 0 || indice >= notas.length) {
+        alert("El indice no existe");
+      } else if (nuevaNota === "") {
+        alert("La nota esta vacia");
+      } else {
+        notas[indice] = nuevaNota;
+        ver();
+      }
     });
   }
 };
@@ -63,15 +69,12 @@ const eliminar = () => {
 
     boton2.addEventListener("click", () => {
       let number = input.value - 1;
-
-      let newNotes = [];
-      for (let i = 0; i < notas.length; i++) {
-        if (i != number) {
-          newNotes.push(notas[i]);
-        }
+      if (number < 0 || number >= notas.length) {
+        alert("El indice no existe");
+      } else {
+        notas.splice(number, 1);
+        ver();
       }
-      notas = newNotes;
-      ver();
     });
   }
 };
