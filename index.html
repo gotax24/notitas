@@ -3,20 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Notitas</title>
     <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" href="notas.png" type="image/x-icon" />
   </head>
   <body>
-    <h1>Notitas</h1>
+    <h1>Notitas <span> ❤ </span></h1>
     <div id="contenedor">
-      <input type="text" placeholder="texto que quieres agregar?" id="nota" />
+      <input type="text" placeholder="Texto que quieres agregar?" id="nota" />
       <button onclick="agregar()">Agregar</button>
       <button onclick="editar()">Editar</button>
       <button onclick="eliminar()">Eliminar</button>
     </div>
-    <div>
+    <div class="cuadro">
       <ol id="lista"></ol>
     </div>
+
+    <footer>
+      <p>
+        Programador Ernesto Bracho
+        <br />
+        Diseño Yaldriani Ariza
+      </p>
+      <a
+        href="https://www.flaticon.es/iconos-gratis/publicalo"
+        title="publícalo iconos"
+        >Publícalo iconos creados por Smashicons - Flaticon</a
+      >
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,4 +1,52 @@
-body{
-    background-color: aquamarine;
+body {
+  background-color: rgb(238, 148, 238);
 }
 
+span {
+  color: blueviolet;
+}
+
+#contenedor {
+  width: 500px;
+  height: 50px;
+}
+
+#contenedor button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border-style: none;
+  width: 150px;
+  height: 30px;
+  background-color: rgb(244, 74, 244);
+  color: black;
+}
+
+input {
+  border-radius: 8px;
+  border-style: none;
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+input ::placeholder {
+  color: blueviolet;
+}
+
+.cuadro{
+    width: 500px;
+    height: 600px;
+    position: relative;
+    bottom: 100px;
+    left: 500px;
+    background-color: rgb(240, 240, 151);
+    border-radius: 12px;
+    border-style:dashed;
+    border-color: rgb(140, 140, 140);
+    border-width: 15px;
+}
