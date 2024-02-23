@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notitas</title>
     <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="shortcut icon" href="notas.png" type="image/x-icon" />
   </head>
   <body>
-    <h1>Notitas Rapidas<span class="icon"> ❤ </span></h1>
+    <h1 class="title">Notitas Rapidas<span class="icon"> ❤ </span></h1>
     <div id="contenedor">
-      <input type="text" placeholder="Texto que quieres agregar?" id="nota" class="dato"   />
+      <input
+        type="text"
+        placeholder="Texto que quieres agregar?"
+        id="nota"
+        class="dato"
+      />
       <button class="boton" onclick="agregar()">Agregar</button>
       <button class="boton" onclick="editar()">Editar</button>
       <button class="boton" onclick="eliminar()">Eliminar</button>
@@ -19,17 +25,20 @@
       <ol id="lista"></ol>
     </div>
 
-    <footer>
-      <p>
-        Programador Ernesto Bracho
-        <br />
-        Diseño Yaldriani Ariza
-      </p>
-      <a
-        href="https://www.flaticon.es/iconos-gratis/publicalo"
-        title="publícalo iconos"
-        >Publícalo iconos creados por Smashicons - Flaticon</a
-      >
+    <footer class="creditos">
+      <div class="EY">
+        <p>Programador: Ernesto Bracho</p>
+        <p>Diseño: Yaldriani Ariza</p>
+      </div>
+      <div class="flaticon">
+        <a
+          href="https://www.flaticon.es/iconos-gratis/publicalo"
+          title="publícalo iconos"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Credito por el icono creados a Smashicons - Flaticon</a
+        >
+      </div>
     </footer>
     <script src="app.js"></script>
   </body>

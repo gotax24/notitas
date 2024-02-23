@@ -51,6 +51,7 @@ const editar = () => {
       } else {
         notas[indice] = nuevaNota;
         ver();
+        guardarNotasEnLocalStorage()
       }
     });
   }
@@ -80,6 +81,7 @@ const eliminar = () => {
       } else {
         notas.splice(number, 1);
         ver();
+        guardarNotasEnLocalStorage()
       }
     });
   }
