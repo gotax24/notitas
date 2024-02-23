@@ -111,4 +111,9 @@ body {
   .title {
     text-align: center;
   }
+
+  .creditos{
+    position: relative;
+    top: 350px;
+  }
 }
