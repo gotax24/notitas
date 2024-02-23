@@ -23,10 +23,12 @@ const editar = () => {
   let input = document.createElement("input");
   input.type = "number";
   input.placeholder = "Cual numero quieres editar?";
+  input.classList.add("dato");
 
   let edicion = document.createElement("input");
   edicion.type = "text";
   edicion.placeholder = "Nueva nota";
+  edicion.classList.add("dato");
 
   let boton2 =
     document.getElementById("cambio") || document.createElement("button");
@@ -57,6 +59,7 @@ const eliminar = () => {
   let input = document.createElement("input");
   input.type = "number";
   input.placeholder = "Cual  numero quieres eliminar?";
+  input.classList.add("dato");
 
   let boton2 =
     document.getElementById("confirmar") || document.createElement("button");
