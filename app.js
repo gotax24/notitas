@@ -35,6 +35,7 @@ const editar = () => {
   if (!boton2.id) {
     boton2.id = "cambio";
     boton2.textContent = "Confirmar cambio";
+    boton2.classList.add("boton")
     let contenedor = document.getElementById("contenedor");
     contenedor.appendChild(input);
     contenedor.appendChild(edicion);
@@ -66,6 +67,7 @@ const eliminar = () => {
   if (!boton2.id) {
     boton2.textContent = "Confirmar eliminacion";
     boton2.id = "confirmar";
+    boton2.classList.add("boton")
 
     let contendeor = document.getElementById("contenedor");
     contendeor.appendChild(input);
