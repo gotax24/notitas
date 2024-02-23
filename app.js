@@ -6,6 +6,7 @@ const agregar = () => {
     alert("Esta vacia la nota");
   } else {
     notas.push(notita);
+    guardarNotasEnLocalStorage(); // Guarda las notas actualizadas en localStorage
   }
   ver();
 };
@@ -14,7 +15,7 @@ const ver = () => {
   let leer = document.getElementById("lista");
   leer.innerHTML = "";
   for (let i = 0; i < notas.length; i++) {
-    leer.innerHTML += `<li>${notas[i]} </li>`;
+    leer.innerHTML += `<li>${notas[i]}</li>`;
   }
 };
 
@@ -77,4 +78,15 @@ const eliminar = () => {
       }
     });
   }
+};
+
+//Verifica el local storage
+if (localStorage.getItem("notitas")) {
+  notas = JSON.parse(localStorage.getItem("notitas"));
+  ver();
+}
+
+const guardarNotasEnLocalStorage = () => {
+  // Guarda las notas en el localStorage en formato JSON
+  localStorage.setItem("notitas", JSON.stringify(notas));
 };

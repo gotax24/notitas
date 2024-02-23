@@ -50,3 +50,10 @@ input ::placeholder {
     border-color: rgb(140, 140, 140);
     border-width: 15px;
 }
+
+#lista{
+  color: blueviolet;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
