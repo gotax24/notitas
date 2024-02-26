@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,22 +10,22 @@
   </head>
   <body>
     <h1 class="title">Notitas Rapidas<span class="icon"> ❤ </span></h1>
-    <div id="contenedor">
+    <div id="container">
       <input
         type="text"
         placeholder="Texto que quieres agregar?"
-        id="nota"
-        class="dato"
+        id="note"
+        class="datum"
       />
-      <button class="boton" onclick="agregar()">Agregar</button>
-      <button class="boton" onclick="editar()">Editar</button>
-      <button class="boton" onclick="eliminar()">Eliminar</button>
+      <button onclick="add()">Agregar</button>
+      <button onclick="edit()">Editar</button>
+      <button onclick="eliminate()">Eliminar</button>
     </div>
-    <div class="cuadro">
-      <ol id="lista"></ol>
+    <div class="panel">
+      <ol id="list"></ol>
     </div>
 
-    <footer class="creditos">
+    <footer class="credits">
       <div class="EY">
         <p>Programador: Ernesto Bracho</p>
         <p>Diseño: Yaldriani Ariza</p>
