@@ -40,16 +40,18 @@ button {
   font-size: 14px;
 }
 
-.datum ::placeholder {
+.datum::placeholder {
   color: blueviolet;
 }
 
 .panel {
-  width: 500px;
+  width: 100%; /* Ajuste para hacer el contenedor más flexible */
+  max-width: 500px;
   height: 600px;
   position: relative;
   bottom: 100px;
-  left: 500px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgb(240, 240, 151);
   border-radius: 12px;
   border-style: dashed;
@@ -80,19 +82,19 @@ button {
 }
 
 @media screen and (max-width: 750px) {
-  #contenedor {
+  #container {
     width: 350px;
   }
 
-  #contenedor button {
+  #container button {
     display: inline;
   }
 
   .panel {
-    position: relative;
-    left: 15px;
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    left: 50%;
+    transform: translateX(-50%);
     top: 350px;
-    width: 350px;
   }
 
   .datum {
@@ -112,8 +114,65 @@ button {
     text-align: center;
   }
 
-  .credits{
+  .credits {
     position: relative;
     top: 350px;
+  }
+}
+
+.credits {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 250px;
+}
+
+.social-network-icons {
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+.svg-footer {
+  height: 60px;
+  width: 60px;
+  transition: fill 0.3s, stroke 0.3s, transform 0.3s ease;
+}
+
+.credits .link-networks {
+  margin-right: 15px;
+}
+
+.copyright {
+  font-size: 18px;
+  color: #000000;
+}
+
+.svg-footer:hover {
+  fill: #ffffff;
+  stroke: #ffffff;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    transform: translateY(calc(-50% - 5px)) scale(1);
+  }
+
+  50% {
+    transform: translateY(calc(-50% - 5px)) scale(1.1);
   }
 }
