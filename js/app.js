@@ -3,9 +3,18 @@ let notes = [];
 // Resetear los inputs después de usarlos
 const resetInput = () => {
   document.getElementById("note").value = "";
-  document.getElementById("edit").value = "";
-  document.getElementById("number-edit").value = "";
-  document.getElementById("eliminate").value = "";
+  const editElement = document.getElementById("edit");
+  if (editElement) {
+    editElement.value = "";
+  }
+  const numberedit = document.getElementById("number-edit");
+  if (numberedit) {
+    numberedit.value = "";
+  }
+  const eliminate = document.getElementById("eliminate");
+  if (eliminate) {
+    eliminate.value = "";
+  }
 };
 
 // Función que agrega las notas al array
